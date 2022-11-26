@@ -9,63 +9,63 @@
 using namespace std;
 
 int main(){
-    int sceltamia, sceltabot; 
+    int mychoice, botchoice; 
     
-    int punteggiomio=0;
+    int myscore=0;
     
-    int punteggiobot=0;
+    int botscore=0;
     
     cout << "0 - 0" << endl;
-    cout << "Obiettivo fare 10 punti" << endl;
-    while(punteggiomio<10 && punteggiobot<10){
+    cout << "Goal to score 10 points" << endl;
+    while(myscore<10 && botscore<10){
         srand(time(0));
-        sceltabot=rand()%3;
-        cout << "Menu: \n0 Sasso \n1 Carta \n2 Forbice"<< endl;
-        cin >> sceltamia;
-        if(sceltamia==0 && sceltabot==0){
-            cout << "Pareggio" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+        botchoice=rand()%3;
+        cout << "Menu: \n0 Rock \n1 Paper \n2 Scissors"<< endl;
+        cin >> mychoice;
+        if(mychoice==0 && botchoice==0){
+            cout << "Tie" << "\n" << myscore << " - " << botscore << endl;
         }else{
-            if(sceltamia==1 && sceltabot==1){
-                cout << "Pareggio" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+            if(mychoice==1 && botchoice==1){
+                cout << "Tie" << "\n" << myscore << " - " << botscore << endl;
             }else{
-                if(sceltamia==2 && sceltabot==2){
-                    cout << "Pareggio" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+                if(mychoice==2 && botchoice==2){
+                    cout << "Tie" << "\n" << myscore << " - " << botscore << endl;
                 }
             }
         }
-        if(sceltamia==0 && sceltabot==2){
-            punteggiomio=punteggiomio+1;
-            cout << "Vittoria" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+        if(mychoice==0 && botchoice==2){
+            myscore=myscore+1;
+            cout << "Victory" << "\n" << myscore << " - " << botscore << endl;
         }else{
-            if(sceltamia==1 && sceltabot==0){
-                punteggiomio=punteggiomio+1;
-                cout << "Vittoria" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+            if(mychoice==1 && botchoice==0){
+                myscore=myscore+1;
+                cout << "Victory" << "\n" << myscore << " - " << botscore << endl;
             }else{
-                if(sceltamia==2 && sceltabot==1){
-                    punteggiomio=punteggiomio+1;
-                    cout << "Vittoria" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+                if(mychoice==2 && botchoice==1){
+                    myscore=myscore+1;
+                    cout << "Victory" << "\n" << myscore << " - " << botscore << endl;
                 }
             }
         }
-        if(sceltamia==0 && sceltabot==1){
-            punteggiobot=punteggiobot+1;
-            cout << "Sconfitta" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+        if(mychoice==0 && botchoice==1){
+            botscore=botscore+1;
+            cout << "Defeat" << "\n" << myscore << " - " << botscore << endl;
         }else{
-            if(sceltamia==1 && sceltabot==2){
-                punteggiobot=punteggiobot+1;
-                cout << "Sconfitta" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+            if(mychoice==1 && botchoice==2){
+                botscore=botscore+1;
+                cout << "Defeat" << "\n" << myscore << " - " << botscore << endl;
             }else{
-                if(sceltamia==2 && sceltabot==0){
-                    punteggiobot=punteggiobot+1;
-                    cout << "Sconfitta" << "\n" << punteggiomio << " - " << punteggiobot << endl;
+                if(mychoice==2 && botchoice==0){
+                    botscore=botscore+1;
+                    cout << "Defeat" << "\n" << myscore << " - " << botscore << endl;
                 }
             }
         }
     }
-    if(punteggiomio==10){
-        cout << "Hai vinto" << endl;
+    if(myscore==10){
+        cout << "You Won!" << endl;
     }else{
-        cout << "Hai perso" << endl;
+        cout << "Game Over!" << endl;
     }
     return 0;
 }
