@@ -1,2 +1,2 @@
-# Sasso-Carta-Forbice
+# Rock-Paper-Scissors
 A game.
