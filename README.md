@@ -2,8 +2,9 @@
 
 Linux:
 ```
-apt-get install git
+sudo apt install git
 git clone https://github.com/confessqtore/Rock-Paper-Scissors.git
 cd Rock-Paper-Scissors
-chmod +x RockPaperScissors
+sudo apt install g++
+g++ -o RockPaperScissors main.cpp
 ./RockPaperScissors
